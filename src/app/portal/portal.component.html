@@ -1,0 +1,15 @@
+<div class="app-portal" fxLayout="column" fxFlexFill>
+
+    <p-panel header="Space X">
+        <div class="p-grid">
+            <div class="app-min-height p-col-2 p-shadow-6">
+                <app-portal-filters></app-portal-filters>
+            </div>
+            <div class="app-min-height p-col-10 p-shadow-4">
+                <app-portal-list [queryFilter]= "query"></app-portal-list>
+            </div>
+        </div>
+    </p-panel>
+
+    <router-outlet></router-outlet>
+</div>

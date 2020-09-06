@@ -1,0 +1,26 @@
+
+<div class="app-portal-list">
+    <p-dataView [value]="data" [paginator]="true" [rows]="12">
+        <ng-template let-data pTemplate="listItem">
+            <div class="p-col-12 p-md-3">
+                <div>
+                    <img class="images" src="{{data?.links?.mission_patch}}" alt="Oops Failed">      
+                </div>
+
+                <div style="font-size: 1.2rem;
+                font-weight: 600;
+                text-align: center;">
+                    {{data.mission_name}}
+                </div>
+            </div>
+        </ng-template>
+        <!-- <ng-template let-data pTemplate="gridItem">
+            <div class="p-col-12 p-md-3">
+                {{data.mission_name}}
+            </div>
+        </ng-template> -->
+        <ng-template pTemplate="paginatorleft" let-state>
+            No of items Viewed: {{state.first}}
+        </ng-template>
+    </p-dataView>
+</div>
