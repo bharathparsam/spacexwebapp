@@ -10,7 +10,7 @@ export const portalRoutes: Routes = [
     },
     {
         path: '',
-        redirectTo: 'locator',
+        redirectTo: 'list',
         pathMatch: 'full'
     }
 ];

@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpEvent } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpEvent, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 @Injectable()
 export class ConfigService {
-     API:string = 'https://api.spaceXdata.com/v3/launches?limit=100';
+     API:string = 'https://api.spaceXdata.com/v3/launches';
 
     httpOptions: any = {};
     constructor(private http: HttpClient) {
@@ -24,6 +24,8 @@ export class ConfigService {
      * ===================================================================================
      */
     public fetchlist(query: any): Observable<any> {
+        let params = new HttpParams();
+        params.set('limit', '100');
         return this.http.get(this.API, query)
             .pipe(
                 catchError(error => this.handleError(error, 'ERROR'))
