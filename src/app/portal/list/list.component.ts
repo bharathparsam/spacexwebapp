@@ -26,7 +26,10 @@ export class ListComponent implements OnInit {
      * Add filter query and emit to the paraent
      *
     */
+   this.getData();
+  }
 
+  getData(){
     this.config.fetchlist(this.queryFilter).subscribe(res => {
       this.data = res;
       console.log(res);

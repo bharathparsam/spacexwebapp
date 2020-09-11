@@ -19,7 +19,7 @@ export class FiltersComponent implements OnInit {
   ngOnInit(): void {
     this.years = [2014, 2015, 2016, 2017, 2018, 2019, 2020];
   }
-  filterWithYear(){
-    this.buttonClicked.emit('Testing');
+  filterWithYear(selectedYear){
+    this.buttonClicked.emit(selectedYear);
   }
 }

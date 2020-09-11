@@ -30,7 +30,15 @@ export class PortalComponent implements OnInit {
     };
   }
 parentEventHandlerFunction(valueEmitted){
-    this.valueEmittedFromChildComponent = valueEmitted;
+  this.query = {
+    "limitValue": 100,
+    "isLaunch": "",
+    "isLand": "",
+    "year": valueEmitted
+    
+};
+this.valueEmittedFromChildComponent = valueEmitted;
+
 }
 
 }

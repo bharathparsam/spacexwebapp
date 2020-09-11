@@ -1,17 +1,10 @@
 <div class="container">
   <div *ngFor="let item of years; let index">
-    <div class="col-md-6">
-      <button class="btn btn-primary form-control  btn-block" (click)="filterWithYear()">{{index}}</button></div>
-    <div class="col-md-6">
+    <div class="row">
+      <div class="col-md-6">
+      <button class="btn btn-primary form-control  btn-block" (click)="filterWithYear(index)">{{index}}</button>
+    </div>
   </div>
-    <!-- <div class="row">
-      <div class="col-md-6">
-        <button class="btn btn-primary  form-control  btn-block">2018</button></div>
-      <div class="col-md-6">
-        <button class="btn btn-primary form-control btn-block">2015</button></div>
-    <div class="col-md-6">
-      <button class="btn btn-primary  form-control  btn-block">2018</button></div>
-    <div class="col-md-6">
-      <button class="btn btn-primary form-control btn-block">2015</button></div> -->
+  </div>
 
   </div>
