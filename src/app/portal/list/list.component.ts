@@ -25,7 +25,7 @@ export class ListComponent implements OnInit {
      * Implement lazy loading so that there wont be partial load.
      * Add filter query and emit to the paraent
      *
-    */;
+    */
 
     this.config.fetchlist(this.queryFilter).subscribe(res => {
       this.data = res;

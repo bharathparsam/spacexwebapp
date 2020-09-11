@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit,EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-portal-filters',
@@ -6,13 +6,20 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./filters.component.scss']
 })
 export class FiltersComponent implements OnInit {
-
+  years: any[];
   @Input() queryFilter: string;
-  constructor() { 
-    
+  @Output()
+  buttonClicked: EventEmitter<string> = new EventEmitter<string>();
+
+
+  constructor() {
+
   }
 
   ngOnInit(): void {
+    this.years = [2014, 2015, 2016, 2017, 2018, 2019, 2020];
   }
-
+  filterWithYear(){
+    this.buttonClicked.emit('Testing');
+  }
 }

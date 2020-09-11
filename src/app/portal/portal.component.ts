@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./portal.component.scss']
 })
 export class PortalComponent implements OnInit {
-  visibleSidebar1: boolean = true;
-  query: string;
+  visibleSidebar1 = true;
+  query: any;
+  valueEmittedFromChildComponent: string;
+  // tslint:disable-next-line: jsdoc-format
+  /**Get the output variable here */
 
   constructor() { }
 
@@ -17,7 +20,17 @@ export class PortalComponent implements OnInit {
    * @memberof PortalComponent
    */
   ngOnInit(): void {
-    this.query = 'limit=100';
+   // this.query = '100';
+    // limitValue: any,isLaunch: any,isLand: any, year: any
+    this.query = {
+        "limitValue": 100,
+        "isLaunch": "",
+        "isLand": "",
+        "year": ""
+    };
   }
+parentEventHandlerFunction(valueEmitted){
+    this.valueEmittedFromChildComponent = valueEmitted;
+}
 
 }

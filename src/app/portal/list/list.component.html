@@ -4,13 +4,24 @@
         <ng-template let-data pTemplate="listItem">
             <div class="p-col-12 p-md-3">
                 <div>
-                    <img class="images" src="{{data?.links?.mission_patch}}" alt="Oops Failed">      
+                    <img class="images" src="{{data?.links?.mission_patch}}" alt="OImage ">      
                 </div>
-
-                <div style="font-size: 1.2rem;
-                font-weight: 600;
-                text-align: center;">
-                    {{data.mission_name}}
+                <div class="app-list">
+                    <div>
+                        {{data.mission_name}}#{{data.flight_number}}
+                    </div>
+                    <div>
+                        Missions Ids:<span class="mission-content">{{data.mission_id}}</span>
+                    </div>
+                    <div>
+                        Launch Year:<span class="mission-content">{{data.launch_year}}</span>
+                    </div>
+                    <div>
+                        Successful Launch:<span class="mission-content">{{data.launch_success}}</span>
+                    </div>
+                    <div>
+                       Successful Landing:<span class="mission-content">{{data.launch_landing}}</span>
+                    </div>
                 </div>
             </div>
         </ng-template>
