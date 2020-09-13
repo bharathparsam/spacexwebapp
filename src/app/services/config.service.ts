@@ -28,12 +28,20 @@ export class ConfigService {
      public fetchlist(queryParams): Observable<any> {
         // limitValue: any,isLaunch: any,isLand: any, year: any
         console.log(queryParams);
-        const requestParams = {
-            limit: queryParams.limitValue,
-            launch_success : queryParams.isLaunch,
-            land_success : queryParams.isLand,
-            launch_year: queryParams.year
-         };
+        let requestParams = {
+            limit: queryParams.limitValue
+        };
+        if (queryParams.isLaunch !== '') {
+            requestParams = {...requestParams, ...{ launch_success : queryParams.isLaunch}};
+        }
+        if (queryParams.isLand !== ''){
+            requestParams = {...requestParams, ...{ land_success : queryParams.isLand}};
+        }
+        if (queryParams.year !== '') {
+            requestParams = {...requestParams, ...{ launch_year: queryParams.year}};
+        }
+
+
         console.log(requestParams);
         return this.http.get(this.API, {
             params: requestParams

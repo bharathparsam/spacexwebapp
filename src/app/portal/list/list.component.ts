@@ -9,7 +9,7 @@ import { ConfigService } from 'src/app/services/config.service';
 export class ListComponent implements OnInit {
 
   @Input() queryFilter: string;
-  data: any[];
+  @Input() data: any[];
 
   constructor(private config: ConfigService) { }
 
@@ -26,15 +26,10 @@ export class ListComponent implements OnInit {
      * Add filter query and emit to the paraent
      *
     */
-   this.getData();
+   // this.getData();
   }
 
-  getData(){
-    this.config.fetchlist(this.queryFilter).subscribe(res => {
-      this.data = res;
-      console.log(res);
-    });
-  }
+
 
 
 }

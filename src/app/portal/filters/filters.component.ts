@@ -11,6 +11,13 @@ export class FiltersComponent implements OnInit {
   @Output()
   buttonClicked: EventEmitter<string> = new EventEmitter<string>();
 
+  @Output()
+  statusForlanuch: EventEmitter<string> = new EventEmitter<string>();
+  @Output()
+  statusForlanding: EventEmitter<string> = new EventEmitter<string>();
+  // @Output()
+  // resetEvent: EventEmitter<string> = new EventEmitter<string>();
+  
 
   constructor() {
 
@@ -22,4 +29,18 @@ export class FiltersComponent implements OnInit {
   filterWithYear(selectedYear){
     this.buttonClicked.emit(selectedYear);
   }
+
+  filterForStatus(status) {
+    this.statusForlanuch.emit(status);
+  } 
+
+  filterLandingStatus(status) {
+    this.statusForlanding.emit(status);
+  }
+
+  // reset() {
+  //   this.resetEvent.emit('true');
+
+      // HAVE RESET BUTTON TO refresh the list PS
+  // }
 }
