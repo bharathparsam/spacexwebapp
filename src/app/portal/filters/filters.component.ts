@@ -24,7 +24,7 @@ export class FiltersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.years = [2014, 2015, 2016, 2017, 2018, 2019, 2020];
+    this.years = [2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020];
   }
   filterWithYear(selectedYear){
     this.buttonClicked.emit(selectedYear);
@@ -32,8 +32,7 @@ export class FiltersComponent implements OnInit {
 
   filterForStatus(status) {
     this.statusForlanuch.emit(status);
-  } 
-
+  }
   filterLandingStatus(status) {
     this.statusForlanding.emit(status);
   }

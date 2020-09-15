@@ -1,37 +1,47 @@
-
 <div class="app-portal-list">
-    <p-dataView [value]="data" [paginator]="true" [rows]="12">
-        <ng-template let-data pTemplate="listItem">
-            <div class="p-col-12 p-md-3">
-                <div>
-                    <img class="images" src="{{data?.links?.mission_patch}}" alt="OImage ">      
-                </div>
-                <div class="app-list">
-                    <div>
-                        {{data.mission_name}}#{{data.flight_number}}
-                    </div>
-                    <div>
-                        Missions Ids:<span class="mission-content">{{data.mission_id}}</span>
-                    </div>
-                    <div>
-                        Launch Year:<span class="mission-content">{{data.launch_year}}</span>
-                    </div>
-                    <div>
-                        Successful Launch:<span class="mission-content">{{data.launch_success}}</span>
-                    </div>
-                    <div>
-                       Successful Landing:<span class="mission-content">{{data.launch_landing}}</span>
-                    </div>
-                </div>
-            </div>
-        </ng-template>
-        <!-- <ng-template let-data pTemplate="gridItem">
+  <p-dataView [value]="data" [paginator]="true" [rows]="12">
+    <ng-template let-data pTemplate="listItem">
+      <div class="p-col-12 p-md-3">
+        <div>
+          <img
+            class="images"
+            src="{{ data?.links?.mission_patch }}"
+            alt="Image not found"
+          />
+        </div>
+        <div class="app-list">
+          <div>{{ data.mission_name }}#{{ data.flight_number }}</div>
+          <div>
+            Missions Ids:<span class="mission-content">{{
+              data.mission_id
+            }}</span>
+          </div>
+          <div>
+            Launch Year:<span class="mission-content">{{
+              data.launch_year
+            }}</span>
+          </div>
+          <div>
+            Successful Launch:<span class="mission-content">{{
+              data.launch_success
+            }}</span>
+          </div>
+          <div>
+            <!-- resp[0].rocket.first_stage.cores[0].land_success -->
+            Successful Landing:<span class="mission-content">{{
+              data?.rocket?.first_stage?.cores?.land_success
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <!-- <ng-template let-data pTemplate="gridItem">
             <div class="p-col-12 p-md-3">
                 {{data.mission_name}}
             </div>
         </ng-template> -->
-        <ng-template pTemplate="paginatorleft" let-state>
-            No of items Viewed: {{state.first}}
-        </ng-template>
-    </p-dataView>
+    <ng-template pTemplate="paginatorleft" let-state>
+      No of items Viewed: {{ state.first }}
+    </ng-template>
+  </p-dataView>
 </div>

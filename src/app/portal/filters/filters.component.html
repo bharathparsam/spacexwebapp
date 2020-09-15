@@ -1,23 +1,60 @@
 <div class="container">
-  <div *ngFor="let item of years; let index">
+  <label><strong>Filters</strong></label>
+  <div>
+    <label>Launch Year</label>
     <div class="row">
-      <div class="col-md-6">
-      <button class="btn btn-primary form-control  btn-block" (click)="filterWithYear(index)">{{index}}</button>
+      <div class="col-sm-6" *ngFor="let item of years; let index">
+        <button
+          class="btn my-2 btn-primary form-control btn-block"
+          (click)="filterWithYear(index)"
+        >
+          {{ index }}
+        </button>
+      </div>
     </div>
-  </div>
   </div>
 
   <div>
-  <label> Succesful lanuch</label>
-    <button class="btn btn-primary form-control  btn-block" (click)="filterForStatus('True')">True</button>
-    <button class="btn btn-primary form-control  btn-block" (click)="filterForStatus('False')">False</button>
+    <label> Succesful lanuch</label>
+    <div class="row">
+      <div class="col-sm">
+        <button
+          class="btn btn-primary form-control btn-block"
+          (click)="filterForStatus('True')"
+        >
+          True
+        </button>
+      </div>
+      <div class="col-sm">
+        <button
+          class="btn btn-primary form-control btn-block"
+          (click)="filterForStatus('False')"
+        >
+          False
+        </button>
+      </div>
+    </div>
   </div>
 
   <div>
     <label> Succesful landing</label>
-
-    <button class="btn btn-primary form-control  btn-block" (click)="filterLandingStatus('True')">True</button>
-    <button class="btn btn-primary form-control  btn-block" (click)="filterLandingStatus('False')">False</button>
+    <div class="row">
+      <div class="col-sm">
+        <button
+          class="btn btn-primary form-control btn-block"
+          (click)="filterLandingStatus('True')"
+        >
+          True
+        </button>
+      </div>
+      <div class="col-sm">
+        <button
+          class="btn btn-primary form-control btn-block"
+          (click)="filterLandingStatus('False')"
+        >
+          False
+        </button>
+      </div>
+    </div>
   </div>
-
-  </div>
+</div>

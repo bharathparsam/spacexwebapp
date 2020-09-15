@@ -4,7 +4,7 @@ import { ConfigService } from '../services/config.service';
 @Component({
   selector: 'app-portal',
   templateUrl: './portal.component.html',
-  styleUrls: ['./portal.component.scss']
+  styleUrls: ['./portal.component.scss'],
 })
 export class PortalComponent implements OnInit {
   visibleSidebar1 = true;
@@ -17,7 +17,7 @@ export class PortalComponent implements OnInit {
   // tslint:disable-next-line: jsdoc-format
   /**Get the output variable here */
 
-  constructor(private configService: ConfigService) { }
+  constructor(private configService: ConfigService) {}
 
   /**
    * Smart Component (stateFull component)
@@ -25,67 +25,62 @@ export class PortalComponent implements OnInit {
    * @memberof PortalComponent
    */
   ngOnInit(): void {
-   // this.query = '100';
+    // this.query = '100';
     // limitValue: any,isLaunch: any,isLand: any, year: any
     this.resetValuesForQuery();
 
     this.getListByFilters();
   }
 
-  getListByFilters(){
-    this.configService.fetchlist(this.query).subscribe(resp => {
-      this.data = resp ;
+  getListByFilters() {
+    this.configService.fetchlist(this.query).subscribe((resp) => {
+      debugger;
+      this.data = resp;
       console.log(resp);
       this.resetValuesForQuery();
     });
   }
 
-parentEventHandlerFunction(valueEmitted){
+  parentEventHandlerFunction(valueEmitted) {
+    // From Filters
 
-  // From Filters
+    this.valueEmitted = valueEmitted;
+    this.valueEmittedFromChildComponent = valueEmitted;
+    this.requestBasedOnFilters();
+  }
 
-this.valueEmitted = valueEmitted;
-this.valueEmittedFromChildComponent = valueEmitted;
-this.requestBasedOnFilters();
-}
+  setvalueForLanuch(launch) {
+    debugger;
+    this.isLaunch = launch;
 
-setvalueForLanuch(launch) {
-  debugger;
-  this.isLaunch = launch;
+    this.requestBasedOnFilters();
+  }
 
-  this.requestBasedOnFilters();
-}
+  setvalueForLanding(landingStatus) {
+    this.isLand = landingStatus;
 
-setvalueForLanding(landingStatus) {
-  debugger;
-  this.isLand = landingStatus;
+    this.requestBasedOnFilters();
+  }
 
-  this.requestBasedOnFilters();
-}
+  requestBasedOnFilters() {
+    this.query = {
+      limitValue: 100,
+      isLaunch: this.isLaunch,
+      isLand: this.isLand,
+      year: this.valueEmitted,
+    };
+    this.getListByFilters();
+  }
 
-requestBasedOnFilters() {
-  debugger;
-  this.query = {
-    "limitValue": 100,
-    "isLaunch": this.isLaunch,
-    "isLand": this.isLand,
-    "year": this.valueEmitted  
-};
-this.getListByFilters();
-}
-
-
-resetValuesForQuery() {
-  this.query = {
-    "limitValue": 100,
-    "isLaunch": "",
-    "isLand": "",
-    "year": ""
-};
-this.isLand = '';
-this.isLaunch = '';
-this.valueEmitted = '';
-
-
-}
+  resetValuesForQuery() {
+    this.query = {
+      limitValue: 100,
+      isLaunch: '',
+      isLand: '',
+      year: '',
+    };
+    this.isLand = '';
+    this.isLaunch = '';
+    this.valueEmitted = '';
+  }
 }
