@@ -34,7 +34,6 @@ export class PortalComponent implements OnInit {
 
   getListByFilters() {
     this.configService.fetchlist(this.query).subscribe((resp) => {
-      debugger;
       this.data = resp;
       console.log(resp);
       this.resetValuesForQuery();
@@ -50,15 +49,14 @@ export class PortalComponent implements OnInit {
   }
 
   setvalueForLanuch(launch) {
-    debugger;
     this.isLaunch = launch;
-
+    this.isLand = launch;
     this.requestBasedOnFilters();
   }
 
   setvalueForLanding(landingStatus) {
     this.isLand = landingStatus;
-
+    this.isLaunch = landingStatus;
     this.requestBasedOnFilters();
   }
 

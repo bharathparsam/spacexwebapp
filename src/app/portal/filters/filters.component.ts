@@ -1,4 +1,5 @@
 import { Component, OnInit,EventEmitter, Input, Output } from '@angular/core';
+// import { stat } from 'fs';
 
 @Component({
   selector: 'app-portal-filters',
@@ -31,10 +32,20 @@ export class FiltersComponent implements OnInit {
   }
 
   filterForStatus(status) {
-    this.statusForlanuch.emit(status);
+    this.setParamsStatus(status);
   }
   filterLandingStatus(status) {
-    this.statusForlanding.emit(status);
+    this.setParamsStatus(status);
+  }
+
+  setParamsStatus(status){
+    if (status === 'true'){
+      this.statusForlanuch.emit('true');
+      this.statusForlanding.emit('true');
+    }else{
+      this.statusForlanuch.emit('false');
+      this.statusForlanding.emit('false');
+    }
   }
 
   // reset() {

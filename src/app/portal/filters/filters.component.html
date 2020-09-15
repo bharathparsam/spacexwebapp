@@ -1,9 +1,10 @@
 <div class="container">
   <label><strong>Filters</strong></label>
-  <div>
+  <div class="text-center">
     <label>Launch Year</label>
+    <hr>
     <div class="row">
-      <div class="col-sm-6" *ngFor="let item of years; let index">
+      <div class="col-lg-6 col-xs-3" *ngFor="let item of years; let index">
         <button
           class="btn my-2 btn-primary form-control btn-block"
           (click)="filterWithYear(index)"
@@ -14,13 +15,14 @@
     </div>
   </div>
 
-  <div>
+  <div class="text-center">
     <label> Succesful lanuch</label>
+    <hr>
     <div class="row">
       <div class="col-sm">
         <button
           class="btn btn-primary form-control btn-block"
-          (click)="filterForStatus('True')"
+          (click)="filterForStatus('true')"
         >
           True
         </button>
@@ -28,7 +30,7 @@
       <div class="col-sm">
         <button
           class="btn btn-primary form-control btn-block"
-          (click)="filterForStatus('False')"
+          (click)="filterForStatus('false')"
         >
           False
         </button>
@@ -36,13 +38,14 @@
     </div>
   </div>
 
-  <div>
+  <div class="text-center">
     <label> Succesful landing</label>
+    <hr>
     <div class="row">
       <div class="col-sm">
         <button
           class="btn btn-primary form-control btn-block"
-          (click)="filterLandingStatus('True')"
+          (click)="filterLandingStatus('true')"
         >
           True
         </button>
@@ -50,7 +53,7 @@
       <div class="col-sm">
         <button
           class="btn btn-primary form-control btn-block"
-          (click)="filterLandingStatus('False')"
+          (click)="filterLandingStatus('false')"
         >
           False
         </button>
