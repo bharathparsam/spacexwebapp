@@ -1,10 +1,9 @@
-<div class="container">
-  <label><strong>Filters</strong></label>
-  <div class="text-center">
-    <label>Launch Year</label>
-    <hr>
-    <div class="row">
-      <div class="col-lg-6 col-xs-3" *ngFor="let item of years; let index">
+<div class="app-portal-filters">
+  <div><strong>Filters</strong></div>
+  <div class="text-center my-2"><u>Launch Year</u></div>
+  <div class="p-grid">
+    <div class="p-col-6" *ngFor="let item of years; let index">
+      <div class="box">
         <button
           class="btn my-2 btn-primary form-control btn-block"
           (click)="filterWithYear(index)"
@@ -14,12 +13,10 @@
       </div>
     </div>
   </div>
-
-  <div class="text-center">
-    <label> Succesful lanuch</label>
-    <hr>
-    <div class="row">
-      <div class="col-sm">
+  <div class="text-center my-2"><u>Successful Launch</u></div>
+  <div class="p-grid">
+    <div class="p-col-6">
+      <div class="box">
         <button
           class="btn btn-primary form-control btn-block"
           (click)="filterForStatus('true')"
@@ -27,7 +24,9 @@
           True
         </button>
       </div>
-      <div class="col-sm">
+    </div>
+    <div class="p-col-6">
+      <div class="box">
         <button
           class="btn btn-primary form-control btn-block"
           (click)="filterForStatus('false')"
@@ -37,12 +36,10 @@
       </div>
     </div>
   </div>
-
-  <div class="text-center">
-    <label> Succesful landing</label>
-    <hr>
-    <div class="row">
-      <div class="col-sm">
+  <div class="text-center my-2"><u>Successful Landing</u></div>
+  <div class="p-grid">
+    <div class="p-col-6">
+      <div class="box">
         <button
           class="btn btn-primary form-control btn-block"
           (click)="filterLandingStatus('true')"
@@ -50,7 +47,9 @@
           True
         </button>
       </div>
-      <div class="col-sm">
+    </div>
+    <div class="p-col-6">
+      <div class="box">
         <button
           class="btn btn-primary form-control btn-block"
           (click)="filterLandingStatus('false')"
