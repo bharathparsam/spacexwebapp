@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { ConfigService } from '../services/config.service';
+import { Component, OnInit } from "@angular/core";
+import { ConfigService } from "../services/config.service";
 
 @Component({
-  selector: 'app-portal',
-  templateUrl: './portal.component.html',
-  styleUrls: ['./portal.component.scss'],
+  selector: "app-portal",
+  templateUrl: "./portal.component.html",
+  styleUrls: ["./portal.component.scss"],
 })
 export class PortalComponent implements OnInit {
   visibleSidebar1 = true;
@@ -37,7 +37,6 @@ export class PortalComponent implements OnInit {
     this.isloading = true;
     this.configService.fetchlist(this.query).subscribe((resp) => {
       this.data = resp;
-      console.log(resp);
       this.resetValuesForQuery();
       this.isloading = false;
     });
@@ -76,12 +75,12 @@ export class PortalComponent implements OnInit {
   resetValuesForQuery() {
     this.query = {
       limitValue: 100,
-      isLaunch: '',
-      isLand: '',
-      year: '',
+      isLaunch: "",
+      isLand: "",
+      year: "",
     };
-    this.isLand = '';
-    this.isLaunch = '';
-    this.valueEmitted = '';
+    this.isLand = "";
+    this.isLaunch = "";
+    this.valueEmitted = "";
   }
 }

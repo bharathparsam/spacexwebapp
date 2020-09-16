@@ -1,10 +1,10 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from "@angular/core";
 // import { stat } from 'fs';
 
 @Component({
-  selector: 'app-portal-filters',
-  templateUrl: './filters.component.html',
-  styleUrls: ['./filters.component.scss'],
+  selector: "app-portal-filters",
+  templateUrl: "./filters.component.html",
+  styleUrls: ["./filters.component.scss"],
 })
 export class FiltersComponent implements OnInit {
   years: any[];
@@ -52,12 +52,12 @@ export class FiltersComponent implements OnInit {
   }
 
   setParamsStatus(status) {
-    if (status === 'true') {
-      this.statusForlanuch.emit('true');
-      this.statusForlanding.emit('true');
+    if (status === "true") {
+      this.statusForlanuch.emit("true");
+      this.statusForlanding.emit("true");
     } else {
-      this.statusForlanuch.emit('false');
-      this.statusForlanding.emit('false');
+      this.statusForlanuch.emit("false");
+      this.statusForlanding.emit("false");
     }
   }
 

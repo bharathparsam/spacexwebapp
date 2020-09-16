@@ -1,6 +1,10 @@
 # SpaceX WebApplication
 
-This spaceX web-application allows the user to load the list of spaceX launches.You can directly load the application by [clicking here](https://spacexwebapp.herokuapp.com/)
+This spaceX web-application allows the user to load the list of spaceX launches.
+
+## Launch Application
+
+[Launch Mission](https://spacexwebapp.herokuapp.com/)
 
 ### Table of Contents
 
@@ -18,7 +22,7 @@ Click on the code with download icon then click download zip or use clone option
 
 ## Prerequisite
 
-1. Node version ^8
+1. Node version ^10
 2. Angular version ^9
 
 ## Installation Steps
@@ -35,5 +39,9 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 ## Lighthouse Reports
 
-Below are the screenshots of Lighouts SOE Score card.
+Lighthouse complete report pdf file is added in the results folder with the name Lighthouse Performance Record.pdf
+
+The below snippet shows the lighthouse score.
+
+![Test Result](Result/screenshot.PNG)
 
