@@ -2,10 +2,10 @@
 
     <p-panel header="Space X">
         <div class="p-grid">
-            <div class="app-min-height p-col-2 p-shadow-6">
+            <div class="app-min-height p-col-12 p-md-6 p-lg-2 p-shadow-6">
                 <app-portal-filters (statusForlanuch)="setvalueForLanuch($event)" (statusForlanding)="setvalueForLanding($event)" (buttonClicked)="parentEventHandlerFunction($event)" (reset)="resetValuesForQuery()"></app-portal-filters>
             </div>
-            <div class="app-min-height p-col-10 p-shadow-4">
+            <div class="app-min-height p-col-12 p-md-6 p-lg-10 p-shadow-4">
                 <app-portal-list [data]= "data" [queryFilter]= "query"></app-portal-list>
             </div>
         </div>
