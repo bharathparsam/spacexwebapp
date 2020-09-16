@@ -10,7 +10,7 @@
           />
         </div>
         <div class="app-list">
-          <div class="align-text">{{ data.mission_name }}#{{ data.flight_number }}</div>
+          <div class="align-text mission-name">{{ data.mission_name }}#{{ data.flight_number }}</div>
           <div>
             Missions Ids:<span class="mission-content">{{
               data.mission_id
@@ -28,20 +28,12 @@
           </div>
           <div>
             <!-- resp[0].rocket.first_stage.cores[0].land_success -->
-            Successful Landing:<span class="mission-content">{{
-              data?.rocket?.first_stage?.cores?.land_success
-            }}</span>
+            Successful Landing:<span class="mission-content"></span>
           </div>
         </div>
       </div>
     </ng-template>
-    <!-- <ng-template let-data pTemplate="gridItem">
-            <div class="p-col-12 p-md-3">
-                {{data.mission_name}}
-            </div>
-        </ng-template> -->
-    <ng-template pTemplate="paginatorleft" let-state>
-      No of items Viewed: {{ state.first }}
+    <ng-template pTemplate="paginatorleft" >
     </ng-template>
   </p-dataView>
 </div>

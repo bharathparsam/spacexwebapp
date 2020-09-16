@@ -14,11 +14,7 @@ This spaceX web-application allows the user to load the list of spaceX launches.
 
 ## How to clone the Git Repo
 
-Steps to be followed are as follows: 
-
-1.Click on the code with download icon click download zip or use clone option if you are cloning using ssh.
-
-use the git clone command to complete the process.
+Click on the code with download icon then click download zip or use clone option if you are cloning using ssh and then use the git clone command to complete the process.
 
 ## Prerequisite
 
