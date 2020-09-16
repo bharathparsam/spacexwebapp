@@ -1,5 +1,11 @@
 <div class="app-portal-list">
-  <p-dataView [value]="data" [paginator]="true" [rows]="8">
+  <div [hidden]="data.length > 0"><p>No Record Found</p></div>
+  <p-dataView
+    [value]="data"
+    [paginator]="true"
+    [hidden]="data.length == 0"
+    [rows]="8"
+  >
     <ng-template let-data pTemplate="listItem">
       <div class="p-col-12 p-md-3">
         <div>
