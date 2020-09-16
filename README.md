@@ -45,3 +45,7 @@ The below snippet shows the lighthouse score.
 
 ![Test Result](Result/screenshot.png)
 
+## Device Comptability Screen Shots
+
+![Mobile Test Result](Result/Desktop.png)
+![Desktop Test Result](Result/Mobile.png)
