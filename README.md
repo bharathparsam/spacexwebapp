@@ -43,5 +43,5 @@ Lighthouse complete report pdf file is added in the results folder with the name
 
 The below snippet shows the lighthouse score.
 
-![Test Result](Result/screenshot.PNG)
+![Test Result](Result/screenshot.png)
 
