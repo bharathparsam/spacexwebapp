@@ -19,14 +19,6 @@ export class ListComponent implements OnInit {
    * @memberof PortalComponent
    */
   ngOnInit(): void {
-
-    //TODO ->  Add query based on the filters
-    /**
-     * Implement lazy loading so that there wont be partial load.
-     * Add filter query and emit to the paraent
-     *
-    */
-   // this.getData();
   }
 
 

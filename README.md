@@ -1,28 +1,43 @@
-# WebAppPS
+# SpaceX WebApplication
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+This spaceX web-application allows the user to load the list of space launches.
+
+### Table of Contents
+
+-   [How to clone the Git Repo](#How-to-clone-the-Git-Repo)
+-   [Prerequisites](#Prerequisite)
+-   [Node Modules Installation Steps](#Installation-steps)
+-   [Run Development Server](#development-server)
+-   [Generate Build Commands](#Build)
+
+* * *
+
+## How to clone the Git Repo
+
+Steps to be followed are as follows: 
+
+1.Click on the code with download icon click download zip or use clone option if you are cloning using ssh.
+
+use the git clone command to complete the process.
+
+## Prerequisite
+
+1. Node version ^8
+2. Angular version ^9
+
+## Installation Steps
+
+Run `npm install` to load all the dependent node modules.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm run serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `npm run build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Lighthouse Reports
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Below are the screenshots of Lighouts SOE Score card.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# Web_app_assingment
