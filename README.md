@@ -1,6 +1,6 @@
 # SpaceX WebApplication
 
-This spaceX web-application allows the user to load the list of space launches.
+This spaceX web-application allows the user to load the list of spaceX launches.You can directly load the application by [clicking here](https://spacexwebapp.herokuapp.com/)
 
 ### Table of Contents
 
