@@ -38,9 +38,9 @@ export class ConfigService {
     debugger;
     let requestParams = {
       limit: queryParams.limitValue,
-      launch_year: queryParams.year != "" ? queryParams.year : "",
-      launch_success: queryParams.isLaunch != "" ? queryParams.isLaunch : "",
-      land_success: queryParams.isLand != "" ? queryParams.isLand : "",
+      launch_year: queryParams.year,
+      launch_success: queryParams.isLaunch,
+      land_success: queryParams.isLand,
     };
     return this.http
       .get(this.API, {

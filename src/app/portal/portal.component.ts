@@ -10,7 +10,7 @@ export class PortalComponent implements OnInit {
   visibleSidebar1 = true;
   query: any;
   data: any;
-  isloading = true;
+  isLoading = true;
   valueEmittedFromChildComponent: string;
   isLaunch: any;
   isLand: any;
@@ -36,10 +36,10 @@ export class PortalComponent implements OnInit {
    * from the configService file
    */
   getListByFilters() {
-    this.isloading = true;
+    this.isLoading = true;
     this.configService.fetchlist(this.query).subscribe((resp) => {
       this.data = resp;
-      this.isloading = false;
+      this.isLoading = false;
     });
   }
 
@@ -81,6 +81,7 @@ export class PortalComponent implements OnInit {
    * Assign the params and send the params to fetch the data
    */
   requestBasedOnFilters() {
+    debugger;
     this.query = {
       limitValue: 100,
       isLaunch: this.isLaunch,
