@@ -16,8 +16,6 @@ export class FiltersComponent implements OnInit {
   statusForlanuch: EventEmitter<string> = new EventEmitter<string>();
   @Output()
   statusForlanding: EventEmitter<string> = new EventEmitter<string>();
-  // @Output()
-  // resetEvent: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {}
 
@@ -40,30 +38,30 @@ export class FiltersComponent implements OnInit {
       2020,
     ];
   }
+
+  /**
+   *
+   * @param selectedYear - Get the year and emit to parent
+   */
   filterWithYear(selectedYear) {
     this.buttonClicked.emit(selectedYear);
   }
 
+  /**
+   *
+   * @param status -Boolean
+   * Get the status and emit to parent
+   */
   filterForStatus(status) {
-    this.setParamsStatus(status);
+    this.statusForlanuch.emit(status);
   }
+
+  /**
+   *
+   * @param status -Boolean
+   * Get the status and emit to parent
+   */
   filterLandingStatus(status) {
-    this.setParamsStatus(status);
+    this.statusForlanding.emit(status);
   }
-
-  setParamsStatus(status) {
-    if (status === "true") {
-      this.statusForlanuch.emit("true");
-      this.statusForlanding.emit("true");
-    } else {
-      this.statusForlanuch.emit("false");
-      this.statusForlanding.emit("false");
-    }
-  }
-
-  // reset() {
-  //   this.resetEvent.emit('true');
-
-  // HAVE RESET BUTTON TO refresh the list PS
-  // }
 }
