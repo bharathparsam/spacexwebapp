@@ -2,15 +2,15 @@
   <div [hidden]="data.length > 0"><p>No Record Found</p></div>
   <p-dataView [value]="data" [paginator]="false" [hidden]="data.length == 0">
     <ng-template let-data pTemplate="listItem">
-      <div class="p-col-12 p-md-3 px-5">
-        <div class="text-center">
+      <div class="p-col-12 p-md-6 p-lg-3 px-5">
+        <div>
           <img
             class="images"
             src="{{ data?.links?.mission_patch }}"
             alt="Image not found"
           />
         </div>
-        <div class="app-list px-5">
+        <div class="app-list">
           <div class="align-text mission-name">
             {{ data.mission_name }}#{{ data.flight_number }}
           </div>
