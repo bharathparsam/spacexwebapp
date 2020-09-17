@@ -8,13 +8,15 @@ This spaceX web-application allows the user to load the list of spaceX launches.
 
 ### Table of Contents
 
--   [How to clone the Git Repo](#How-to-clone-the-Git-Repo)
--   [Prerequisites](#Prerequisite)
--   [Node Modules Installation Steps](#Installation-steps)
--   [Run Development Server](#development-server)
--   [Generate Build Commands](#Build)
+- [How to clone the Git Repo](#How-to-clone-the-Git-Repo)
+- [Prerequisites](#Prerequisite)
+- [Node Modules Installation Steps](#Installation-steps)
+- [Running The Development Server](#development-server)
+- [Build Commands](#Build)
+- [Lighthouse Reports](#Lighthouse-Reports)
+- [Device Comptability Screen Shots](#Device-Comptability-Screen-Shots)
 
-* * *
+---
 
 ## How to clone the Git Repo
 
@@ -43,9 +45,22 @@ Lighthouse complete report pdf file is added in the results folder with the name
 
 The below snippet shows the lighthouse score.
 
-![Test Result](Result/screenshot.png)
+![Lighouthouse Result](Result/screenshot.png)
 
 ## Device Comptability Screen Shots
 
-![Mobile Test Result](Result/Desktop.png)
-![Desktop Test Result](Result/Mobile.png)
+### Inital Load 
+
+![Desktop Test Result](Result/Initialload.png)
+
+### Desktop
+
+![Desktop Test Result](Result/Desktop.png)
+
+### Tablet
+
+![Tablet Test Result](Result/Tablet.png)
+
+### Mobile
+
+![Mobile Test Result](Result/mobile.png)

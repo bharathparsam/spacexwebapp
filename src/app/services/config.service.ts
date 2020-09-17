@@ -35,7 +35,6 @@ export class ConfigService {
    */
 
   public fetchlist(queryParams): Observable<any> {
-    debugger;
     let requestParams = {
       limit: queryParams.limitValue,
       launch_year: queryParams.year,

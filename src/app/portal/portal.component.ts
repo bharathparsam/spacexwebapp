@@ -81,7 +81,6 @@ export class PortalComponent implements OnInit {
    * Assign the params and send the params to fetch the data
    */
   requestBasedOnFilters() {
-    debugger;
     this.query = {
       limitValue: 100,
       isLaunch: this.isLaunch,
