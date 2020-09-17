@@ -51,7 +51,7 @@ The below snippet shows the lighthouse score.
 
 ### Inital Load 
 
-![Desktop Test Result](Result/Initialload.png)
+![Inital Load Result](Result/Initialload.png)
 
 ### Desktop
 
@@ -62,5 +62,4 @@ The below snippet shows the lighthouse score.
 ![Tablet Test Result](Result/Tablet.png)
 
 ### Mobile
-
 ![Mobile Test Result](Result/mobile.png)
