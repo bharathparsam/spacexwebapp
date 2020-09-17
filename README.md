@@ -62,4 +62,4 @@ The below snippet shows the lighthouse score.
 ![Tablet Test Result](Result/Tablet.png)
 
 ### Mobile
-![Mobile Test Result](Result/mobile.png)
+![Mobile Test Result](Result/Mobile.png)
