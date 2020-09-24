@@ -1,7 +1,8 @@
 <div class="app-portal-list">
-  <p-dataView [value]="data" [paginator]="true" [rows]="12">
+  <div [hidden]="data.length > 0"><p>No Record Found</p></div>
+  <p-dataView [value]="data" [paginator]="false" [hidden]="data.length == 0">
     <ng-template let-data pTemplate="listItem">
-      <div class="p-col-12 p-md-3">
+      <div class="p-col-12 p-md-6 p-lg-3 px-5 shadow-sm bg-light rounded mb-3 text-center">
         <div>
           <img
             class="images"
@@ -9,7 +10,7 @@
             alt="Image not found"
           />
         </div>
-        <div class="app-list">
+        <div class="app-list justify-content-center px-4">
           <div class="align-text mission-name">
             {{ data.mission_name }}#{{ data.flight_number }}
           </div>
@@ -36,6 +37,5 @@
         </div>
       </div>
     </ng-template>
-    <ng-template pTemplate="paginatorleft"> </ng-template>
   </p-dataView>
 </div>

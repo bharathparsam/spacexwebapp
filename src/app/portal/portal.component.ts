@@ -10,7 +10,7 @@ export class PortalComponent implements OnInit {
   visibleSidebar1 = true;
   query: any;
   data: any;
-  isloading = true;
+  isLoading = true;
   valueEmittedFromChildComponent: string;
   isLaunch: any;
   isLand: any;
@@ -23,25 +23,31 @@ export class PortalComponent implements OnInit {
   /**
    * Smart Component (stateFull component)
    * Must emit and control the data from parent to child
+   * On inital load reset the Query Parameters and fetch the API
    * @memberof PortalComponent
    */
   ngOnInit(): void {
-    // this.query = '100';
-    // limitValue: any,isLaunch: any,isLand: any, year: any
     this.resetValuesForQuery();
-
     this.getListByFilters();
   }
 
+  /**
+   * getListByFilters - Function to fetch the APIdata
+   * from the configService file
+   */
   getListByFilters() {
-    this.isloading = true;
+    this.isLoading = true;
     this.configService.fetchlist(this.query).subscribe((resp) => {
       this.data = resp;
-      this.resetValuesForQuery();
-      this.isloading = false;
+      this.isLoading = false;
     });
   }
 
+  /**
+   *
+   * @param valueEmitted - Boolean Value
+   * This method is used for handling the event emitter
+   */
   parentEventHandlerFunction(valueEmitted) {
     // From Filters
 
@@ -49,19 +55,31 @@ export class PortalComponent implements OnInit {
     this.valueEmittedFromChildComponent = valueEmitted;
     this.requestBasedOnFilters();
   }
-
+  /**
+   *
+   * @param launch - Boolean value
+   * assign a boolean value and pass the params to assign
+   * the parameters in requestBasedOnFilters function
+   */
   setvalueForLanuch(launch) {
     this.isLaunch = launch;
-    this.isLand = launch;
     this.requestBasedOnFilters();
   }
 
+  /**
+   *
+   * @param landingStatus - Boolean value
+   * assign a boolean value and pass the params to assign
+   * the parameters in requestBasedOnFilters function
+   */
   setvalueForLanding(landingStatus) {
     this.isLand = landingStatus;
-    this.isLaunch = landingStatus;
     this.requestBasedOnFilters();
   }
 
+  /**
+   * Assign the params and send the params to fetch the data
+   */
   requestBasedOnFilters() {
     this.query = {
       limitValue: 100,
@@ -72,6 +90,9 @@ export class PortalComponent implements OnInit {
     this.getListByFilters();
   }
 
+  /**
+   * Used to reset the Query Params
+   */
   resetValuesForQuery() {
     this.query = {
       limitValue: 100,

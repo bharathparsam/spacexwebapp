@@ -1,8 +1,7 @@
 <div class="app-portal" fxLayout="column" fxFlexFill>
   <p-panel header="Space X Launch Programs">
-    <div class="spinner" *ngIf="isloading"></div>
-    <div class="p-grid" *ngIf="!isloading">
-      <div class="app-min-height p-col-12 p-md-6 p-lg-2 p-shadow-6">
+    <div class="p-grid">
+      <div class="app-min-height p-col-12 p-md-5 p-lg-2 px-5 p-shadow-6">
         <app-portal-filters
           (statusForlanuch)="setvalueForLanuch($event)"
           (statusForlanding)="setvalueForLanding($event)"
@@ -10,11 +9,11 @@
           (reset)="resetValuesForQuery()"
         ></app-portal-filters>
       </div>
-      <div class="app-min-height p-col-12 p-md-6 p-lg-10 p-shadow-4">
-        <app-portal-list [data]="data" [queryFilter]="query"></app-portal-list>
+      <div class="app-min-height p-col-12 p-md-7 p-lg-10 p-shadow-4">
+        <div class="spinner" *ngIf="isLoading"></div>
+        <app-portal-list [data]="data" [queryFilter]="query" *ngIf="!isLoading"></app-portal-list>
       </div>
     </div>
   </p-panel>
-
   <router-outlet></router-outlet>
 </div>
