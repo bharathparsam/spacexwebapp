@@ -25,5 +25,17 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "api",
+      "urls": ["https://api.spaceXdata.com/v3/launches"],
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "3d",
+        "timeout": "1m",
+        "strategy": "freshness"
+      }
+    }
   ]
 }
