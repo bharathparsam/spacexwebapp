@@ -37,10 +37,25 @@ export class ConfigService {
   public fetchlist(queryParams): Observable<any> {
     let requestParams = {
       limit: queryParams.limitValue,
-      launch_year: queryParams.year,
-      launch_success: queryParams.isLaunch,
-      land_success: queryParams.isLand,
     };
+    if (queryParams.isLaunch !== "") {
+      requestParams = {
+        ...requestParams,
+        ...{ launch_success: queryParams.isLaunch },
+      };
+    }
+    if (queryParams.isLand !== "") {
+      requestParams = {
+        ...requestParams,
+        ...{ land_success: queryParams.isLand },
+      };
+    }
+    if (queryParams.year !== "") {
+      requestParams = {
+        ...requestParams,
+        ...{ launch_year: queryParams.year },
+      };
+    }
     return this.http
       .get(this.API, {
         params: requestParams,
