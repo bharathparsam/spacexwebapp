@@ -8,6 +8,7 @@
           [ngClass]="{'btn btn-danger':item.active, 'btn btn-success':!item.active}"
           class="btn my-2 btn-success form-control btn-block"
           (click)="filterWithYear(item)"
+          aria-label="button for filtering year"
         >
           {{ item.year }}
         </button>
@@ -22,6 +23,7 @@
         [ngClass]="{'btn btn-danger':item.active, 'btn btn-success':!item.active}"
           class="btn btn-success form-control btn-block"
           (click)="filterForStatus(item)"
+          aria-label="button for launching landing status"
         >
           {{item.launchStatus}}
         </button>
@@ -36,6 +38,7 @@
         [ngClass]="{'btn btn-danger':item.active, 'btn btn-success':!item.active}"
           class="btn btn-primary form-control btn-block"
           (click)="filterLandingStatus(item)"
+          aria-label="button for filtering landing status"
         >
           {{item.launchStatus}}
         </button>

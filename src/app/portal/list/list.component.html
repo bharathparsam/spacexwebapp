@@ -7,29 +7,29 @@
           <img
             class="images"
             src="{{ data?.links?.mission_patch }}"
-            alt="Image not found"
+            alt="rocket image"
           />
         </div>
         <div class="app-list justify-content-center px-4">
-          <div class="align-text mission-name">
+          <div class="align-text mission-name" aria-label="mission name and number">
             {{ data.mission_name }}#{{ data.flight_number }}
           </div>
-          <div>
+          <div aria-label="mission id">
             Missions Ids:<span class="mission-content">{{
               data.mission_id
             }}</span>
           </div>
-          <div>
+          <div aria-label="mission launch year">
             Launch Year:<span class="mission-content">{{
               data.launch_year
             }}</span>
           </div>
-          <div>
+          <div aria-label="successful launch status">
             Successful Launch:<span class="mission-content">{{
               data.launch_success
             }}</span>
           </div>
-          <div>
+          <div aria-label=" successful landing status">
             Successful Landing:<span class="mission-content">{{
               data.rocket.first_stage.cores[0].land_success
             }}</span>
