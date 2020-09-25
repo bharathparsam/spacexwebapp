@@ -29,7 +29,7 @@
   "dataGroups": [
     {
       "name": "api",
-      "urls": ["https://api.spaceXdata.com/v3/launches"],
+      "urls": ["https://api.spaceXdata.com/v3/launches/**"],
       "cacheConfig": {
         "maxSize": 100,
         "maxAge": "3d",
