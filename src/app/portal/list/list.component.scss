@@ -24,10 +24,21 @@
     .mission-name {
         color: blue;
     }
-    @media only screen and (min-width: 768px) and (max-width: 1281px) { 
+
+    @media only screen and (min-width: 768px) and (max-width: 1281px) {
+
         /* for 10 inches tablet screens */
         .images {
             width: 130%;
+        }
+    }
+
+    /*
+    * Landscape
+    */
+    @media(min-width:1024px) and (max-width: 1366px){
+        .images{
+            width: 100%;
         }
     }
        
