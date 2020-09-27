@@ -1,7 +1,7 @@
 .app-portal-list {
     .images {
         width: 75%;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+        box-shadow: 0 3px 6px #00000029, 0 3px 6px #0000003b;
         margin: 2rem 0;
     }
 
@@ -12,7 +12,7 @@
     }
 
     .mission-content {
-        color: blue;
+        color: #0000ff;
         font-weight: 100 !important;
         text-align: left;
     }
@@ -22,7 +22,7 @@
     }
 
     .mission-name {
-        color: blue;
+        color: #0000ff;
     }
 
     @media only screen and (min-width: 768px) and (max-width: 1281px) {
