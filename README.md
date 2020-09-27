@@ -50,7 +50,7 @@ Run `npm run build` to build the project. The build artifacts will be stored in 
 
 ## Lighthouse Reports
 
-Lighthouse complete report pdf file is added in the results folder with the name Lighthouse Performance Record.pdf
+Lighthouse complete report pdf file is added in the results folder with the name Lighthouse Report Viewer
 
 The below snippet shows the lighthouse score.
 
