@@ -8,29 +8,30 @@
             class="images"
             src="{{ data?.links?.mission_patch }}"
             alt="rocket image"
+            [attr.aria-label]="'Mission Image: '+data?.mission_name"
           />
         </div>
         <div class="app-list justify-content-center px-4">
-          <div class="align-text mission-name" aria-label="mission name and number">
+          <div class="align-text mission-name" [attr.aria-label]="'Mission Name: '+data?.mission_name">
             {{ data.mission_name }}#{{ data.flight_number }}
           </div>
-          <div aria-label="mission id">
-            Missions Ids:<span class="mission-content">{{
+          <div [attr.aria-label]="'Mission Id: '+data?.mission_id">
+            Missions Ids: <span class="mission-content">{{
               data.mission_id
             }}</span>
           </div>
-          <div aria-label="mission launch year">
-            Launch Year:<span class="mission-content">{{
+          <div [attr.aria-label]="'Launch Year: '+data?.launch_year">
+            Launch Year: <span class="mission-content">{{
               data.launch_year
             }}</span>
           </div>
-          <div aria-label="successful launch status">
-            Successful Launch:<span class="mission-content">{{
+          <div [attr.aria-label]="'Launch Status:'+data?.launch_success">
+            Successful Launch: <span class="mission-content">{{
               data.launch_success
             }}</span>
           </div>
-          <div aria-label=" successful landing status">
-            Successful Landing:<span class="mission-content">{{
+          <div [attr.aria-label]="'Landing Status:'+ data?.rocket?.first_stage?.cores[0]?.land_success">
+            Successful Landing: <span class="mission-content">{{
               data.rocket.first_stage.cores[0].land_success
             }}</span>
           </div>
