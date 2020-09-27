@@ -54,7 +54,7 @@ Lighthouse complete report pdf file is added in the results folder with the name
 
 The below snippet shows the lighthouse score.
 
-![Lighouthouse Result](Result/screenshot.png)
+![Lighouthouse Result](Result/Screenshot-PWA.png)
 
 ## Device Comptability Screen Shots
 
