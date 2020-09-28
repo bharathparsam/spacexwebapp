@@ -9,6 +9,7 @@ import { SwUpdate } from "@angular/service-worker";
 export class AppComponent {
   title = "WebAppPS";
 
+  //service worker 
   constructor(updates: SwUpdate) {
     updates.available.subscribe((event) => {
       updates.activateUpdate().then(() => document.location.reload());
